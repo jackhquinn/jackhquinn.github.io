@@ -10,10 +10,10 @@
 </head>
 <body>
 <div class="container">
-    <header class="topnav">
-        <a href="#home" class="nav-link">home</a>
-        <a href="#about-section" class="nav-link">about</a>
-        <a href="#projects-section" class="nav-link">projects</a>
+    <header class="nav">
+        <a href="#home">home</a>
+        <a href="#about-section">about</a>
+        <a href="#projects-section">projects</a>
     </header>
     <div id="hero-section" class="section">
         <h1>Welcome to my website.</h1>
@@ -21,26 +21,29 @@
     </div>
     <div id="about-section" class="section">
         <h1>about</h1>
-        <h2>Hello! My name is Jack.</h2>
-        <p>I am a current student at Georgetown University pursuing a Bachelor of Science in Foreign Service (BSFS) in Science, Technology, and International Affairs and minoring in Computer Science.
-            I'm focused on the intersection of geopolitics, technology, and business strategy, particularly with respect to cybersecurity and management consulting. I'm an ardent defender of the Oxford comma.
-            Skills: Mandarin (written, spoken, comprehension), Python, C++, Java, Javascript, HTML, CSS, MATLAB, Bash, Rust, Microsoft Office.</p>
+        <div class="bio-container">
+            <h2>Hello! My name is Jack.</h2>
+            <p>I am a current student at Georgetown University pursuing a Bachelor of Science in Foreign Service (BSFS) in Science, Technology, and International Affairs and minoring in Computer Science.
+                I'm focused on the intersection of geopolitics, technology, and business strategy, particularly with respect to cybersecurity and management consulting. I'm an ardent defender of the Oxford comma.
+                Skills: Mandarin (written, spoken, comprehension), Python, C++, Java, Javascript, HTML, CSS, MATLAB, Bash, Rust, Microsoft Office.</p>
+            <img src="images/headshot.jpg" alt="Headshot of Jack Quinn" class="circular-image">
+        </div>
     </div>
     <div id="projects-section" class="section">
         <h1>projects</h1>
     </div>
-    <footer class="bottomnav">
-        <div class="contact-info">
-            <h2>Contact</h2>
-            <p>Feel free to reach out via email at: jhq5@georgetown.edu</p>
+    <footer class="nav">
+        <h2>Contact</h2>
+        <div class="footer-links">
+            <a href="mailto:jhq5@georgetown.edu?subject=Hey%20there!" class="nav-link">Email</a>
+            <a href="downloads/resume.pdf" download="Jack_Quinn_Resume.pdf">Download My Resume</a>
+            <a href="https://www.linkedin.com/in/jackhquinn/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/jackhquinn" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
         </div>
-        <a href="/Users/jackquinn/public_html/resume.pdf" download="Jack_Quinn_Resume.pdf" class="download-link">Resume</a>
-
-        <a href="https://www.linkedin.com/in/jackhquinn/" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
-        </a>        
-        <a href="https://github.com/jackhquinn" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
         </a>
     </footer>
 </div>

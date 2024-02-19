@@ -11,7 +11,8 @@ body, html {
   color: white;
 }
 
-.topnav {
+.nav {
+  color:black;
   background-color: #F9F3E9;;
   overflow: hidden;
   display: flex; /* Enable flexbox */
@@ -19,7 +20,7 @@ body, html {
   padding: 0 10px; /* Add some padding on the sides */
 }
 
-.topnav a {
+.nav a {
   color: black;
   text-align: center;
   padding: 1vw 1.6vw; /* Using viewport width for padding */
@@ -27,9 +28,8 @@ body, html {
   font-size: 1.7vw; /* Font size will scale with the width of the browser */
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.nav a:hover {
+  color: #568F6F;
 }
 
 h1 {
@@ -38,12 +38,33 @@ h1 {
   color: #568F6F;
 }
 
-h2, p {
-  margin: 0;
-  color: black;
+.bio-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-around; /* Spaces out the items nicely */
+  gap: 20px; /* Adds some space between the paragraph and the image */
 }
 
-/* Hero Section Styles */
+.bio-container p {
+  flex: 1; /* Allows the paragraph to fill the available space */
+  padding: 20px; /* Adds some padding around the text for better readability */
+}
+
+.circular-image {
+  width: 400px; /* Set the width of the image */
+  height: 400px; /* Set the height of the image to be the same as the width */
+  border-radius: 50%; /* This creates the circular shape */
+  object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+}
+
+.circular-image {
+  border: 4px solid #fff; /* Adjust the color and size as needed */
+  box-shadow: 0 0 8px rgba(0,0,0,0.2); /* Optional: Adds a subtle shadow for depth */
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+/* Uniform */
 .section {
   position: relative;
   background-color: #F9F3E9;
@@ -51,22 +72,27 @@ h2, p {
   min-height: 60vh; /* Minimum height relative to the viewport height */
 }
 
-.bottomnav {
-  background-color: #F9F3E9;;
-  overflow: hidden;
+footer.nav {
   display: flex; /* Enable flexbox */
-  justify-content: center;
-  padding: 0 10px; /* Add some padding on the sides */
+  align-items: center; /* Vertically aligns items in the middle */
+  justify-content: space-between; /* Positions the h2 and the footer-links container on opposite ends */
+  padding: 0 50px; /* Add some padding on the sides */
 }
 
-.social-icon {
-  color: black; /* Icon color */
-  padding: 14px; /* Icon padding */
-  font-size: 24px; /* Icon size */
+.footer-links {
+  display: flex; /* Enable flexbox for the links container */
+  align-items: center; /* Vertically aligns the links in the middle */
+  /* Adjust spacing between the links as needed */
 }
 
-.social-icon:hover {
-  color: #568F6F; /* Color change on hover */
+.footer-links .nav-link, .footer-links .social-icon {
+  margin-right: 20px; /* Adds margin to the right of each link for spacing */
+  text-decoration: none;
+  color: black;
+}
+
+.footer-links .nav-link:last-child, .footer-links .social-icon:last-child {
+  margin-right: 0; /* Removes margin for the last link/icon */
 }
 
 /* Media queries for additional responsiveness */
@@ -79,6 +105,19 @@ h2, p {
   .hero-section h1 {
       font-size: 6vw; /* Increase font size for smaller screens */
   }
+
+  .content-container {
+    flex-direction: column; /* Stacks items vertically on smaller screens */
+    text-align: left; /* Centers the text */
+}
+
+.content-container p {
+    padding: 10px; /* Adjusts padding for smaller screens */
+}
+
+.circular-image {
+    margin-bottom: 20px; /* Adds some space below the image */
+}
 }
 
 @media (max-width: 480px) {
